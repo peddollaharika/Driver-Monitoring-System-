@@ -1,90 +1,66 @@
-#**🚗 Driver Monitoring System (ADAS-Like)**
+# 🚗 Driver Monitoring System (ADAS-Like)
 
-**Overview**
+## 📌 Overview
 
 A real-time Driver Monitoring System built using Python, OpenCV, and MediaPipe to detect driver fatigue and distractions. The system analyzes facial landmarks to identify drowsiness, microsleep, yawning, gaze direction, and phone-related distractions, helping improve road safety.
 
-**Features**
+## ✨ Features
 
-👁️ Drowsiness Detection
+* 👁️ Drowsiness Detection
+* 😴 Microsleep Detection
+* 😮 Yawning Detection
+* 👀 Gaze Tracking (Left / Right / Forward)
+* 📱 Phone Distraction Detection
+* 📊 PERCLOS Calculation
+* 🔔 Real-Time Audio Alerts
 
-😴 Microsleep Detection
+## 🛠️ Technologies Used
 
-😮 Yawning Detection
+* Python
+* OpenCV
+* MediaPipe
+* NumPy
 
-👀 Gaze Tracking (Left/Right/Forward)
+## ⚙️ Installation
 
-📱 Phone Distraction Detection
-
-📊 PERCLOS Calculation
-
-🔔 Real-Time Audio Alerts
-
-
-**Technologies Used**
-
-Python
-
-OpenCV
-
-MediaPipe
-
-NumPy
-
-
-**Installation**
-
+```bash
 pip install -r requirements.txt
-
 python driver_monitoring.py
+```
 
+## 🔄 Project Workflow
 
-**⚙️ Project Workflow**
+1. Capture live video from the webcam.
+2. Detect facial landmarks using MediaPipe Face Landmarker.
+3. Extract eye, iris, mouth, nose, and chin landmarks.
+4. Calculate:
 
-1.Capture live video from the webcam.
+   * Eye Aspect Ratio (EAR)
+   * Mouth Aspect Ratio (MAR)
+   * PERCLOS
+5. Analyze:
 
-2.Detect facial landmarks using MediaPipe Face Landmarker.
+   * Eye closure duration
+   * Blink patterns
+   * Yawning behavior
+   * Gaze direction
+   * Head position
+6. Detect fatigue and distraction events.
+7. Trigger visual and audio alerts when unsafe conditions are identified.
+8. Display the driver's current state in real time.
 
-3.Extract eye, iris, mouth, nose, and chin landmarks.
+## 🎯 Applications
 
-4.Calculate:
+* Driver Safety Monitoring
+* Smart Vehicles
+* Advanced Driver Assistance Systems (ADAS)
+* Fatigue Detection Research
 
-  - Eye Aspect Ratio (EAR)
-  
-  - Mouth Aspect Ratio (MAR)
-  
-  - PERCLOS
+## 👩‍💻 Author
 
-5.Analyze:
+**Peddolla Harika**
 
- 
-  - Eye closure duration
-
-  - Blink patterns
-
-  - Yawning behavior
-
-  - Gaze direction
-
-  - Head position
-
-6.Detect fatigue and distraction events.
-
-7.Trigger visual and audio alerts when unsafe conditions are identified.
-
-8.Display the driver's current state in real time.
-
-
-**Applications**
-
-Driver Safety Monitoring
-
-Smart Vehicles
-
-ADAS Systems
-
-Fatigue Detection Research
-
-**Author**
+```
+```
 
 Peddolla Harika
